@@ -17,7 +17,14 @@ st.set_page_config(
     page_title="Zindagi na milegei dubara",
     layout="centered"
 )
-
+st.markdown("""
+<style>
+h1 {
+    color: #061021;
+    text-shadow: 0 0 10px #061021, 0 0 20px #00ffea;
+}
+</style>
+""", unsafe_allow_html=True)
 st.title("🎬 Zindagi na milegei dubara × WhatsApp Character Mapper ")
 
 st.markdown("""
@@ -32,13 +39,16 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 st.markdown("""
-Upload a WhatsApp chat export (`.txt`). 
-Pipeline:
-1. Parse WhatsApp chat  
-2. Translate (if enabled)  
-3. Embed users  
-4. Match movie characters  
-""")
+<div style="color: black; font-size: 25px;">
+<b>Upload a WhatsApp chat export (<code>.txt</code>).<br><br>
+
+<b>Pipeline:</b><br>
+1. Parse WhatsApp chat<br>
+2. Translate (if enabled)<br>
+3. Embed users<br>
+4. Match movie characters</b>
+</div>
+""", unsafe_allow_html=True)
 
 uploaded_file = st.file_uploader(
     "Upload WhatsApp chat (.txt)",
